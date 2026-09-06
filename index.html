@@ -4,226 +4,71 @@
   <meta charset="utf-8">
   <title>Liang-Chi Hsieh</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of Liang-Chi Hsieh, Software Engineer and open source contributor.">
+  <meta name="description" content="Liang-Chi Hsieh — software engineer.">
   <meta name="author" content="Liang-Chi Hsieh">
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg: #ffffff;
       --text: #111111;
       --muted: #6b7280;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --border: #e5e7eb;
-      --max-width: 680px;
     }
 
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
+    html { font-size: 16px; }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      padding: 0 1.5rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
     }
 
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 5rem 0 4rem;
-    }
-
-    /* Header */
-    header {
-      margin-bottom: 4rem;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 0.25rem;
     }
 
-    .subtitle {
+    .bio {
       color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
+      margin-top: 0.375rem;
     }
 
-    .links {
+    nav {
+      margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      list-style: none;
-    }
-
-    .links a {
-      color: var(--accent);
-      text-decoration: none;
+      gap: 1.25rem;
       font-size: 0.875rem;
-      font-weight: 500;
-      border: 1px solid var(--border);
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      transition: background 0.15s, border-color 0.15s;
     }
 
-    .links a:hover {
-      background: #eff6ff;
-      border-color: var(--accent);
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 3.5rem;
-    }
-
-    section h2 {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    nav a {
       color: var(--muted);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section p {
-      color: #374151;
-      margin-bottom: 0.75rem;
-    }
-
-    section p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Project / item list */
-    .item-list {
-      list-style: none;
-    }
-
-    .item-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .item-list li:last-child {
-      border-bottom: none;
-    }
-
-    .item-title {
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .item-title a {
-      color: var(--text);
       text-decoration: none;
+      transition: color 0.15s;
     }
 
-    .item-title a:hover {
-      color: var(--accent);
-    }
-
-    .item-desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.15rem;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      main {
-        padding: 3rem 0 2.5rem;
-      }
-
-      header h1 {
-        font-size: 1.6rem;
-      }
-    }
+    nav a:hover { color: var(--text); }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <h1>Liang-Chi Hsieh</h1>
-      <p class="subtitle">Software Engineer &mdash; Open Source Contributor</p>
-      <ul class="links">
-        <li><a href="https://github.com/viirya">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/liang-chi-hsieh-a7904568/">LinkedIn</a></li>
-        <li><a href="https://scholar.google.com.tw/citations?hl=zh-TW&user=jEVAXJUAAAAJ">Google Scholar</a></li>
-        <li><a href="http://www.slideshare.net/viirya">Slides</a></li>
-        <li><a href="mailto:viirya@viirya.org">Contact</a></li>
-      </ul>
-    </header>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a software engineer focused on large-scale data processing and open source development. I contribute actively to projects in the Apache ecosystem including Apache Arrow and Apache Spark.</p>
-      <p>My background includes a Ph.D. with research in multimedia indexing and search, large-scale multimedia processing, and image annotation systems. I have published papers in these areas and continue to apply that foundation to distributed systems engineering.</p>
-    </section>
-
-    <section id="open-source">
-      <h2>Open Source</h2>
-      <ul class="item-list">
-        <li>
-          <div class="item-title"><a href="https://github.com/apache/arrow">Apache Arrow</a></div>
-          <div class="item-desc">Contributor to the cross-language columnar memory format and data processing library.</div>
-        </li>
-        <li>
-          <div class="item-title"><a href="https://github.com/apache/spark">Apache Spark</a></div>
-          <div class="item-desc">Contributor to the unified analytics engine for large-scale data processing.</div>
-        </li>
-        <li>
-          <div class="item-title"><a href="https://github.com/viirya">More on GitHub</a></div>
-          <div class="item-desc">Personal projects and other contributions.</div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-      <p>Research in large-scale multimedia processing, image automatic annotation, and multimedia indexing and search systems.</p>
-      <ul class="item-list">
-        <li>
-          <div class="item-title"><a href="https://scholar.google.com.tw/citations?hl=zh-TW&user=jEVAXJUAAAAJ">Full publication list on Google Scholar</a></div>
-          <div class="item-desc">Includes papers on multimedia indexing, image annotation, and large-scale search.</div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="talks">
-      <h2>Talks &amp; Slides</h2>
-      <ul class="item-list">
-        <li>
-          <div class="item-title"><a href="http://www.slideshare.net/viirya">Presentations on SlideShare</a></div>
-          <div class="item-desc">Slides from conference talks and technical presentations.</div>
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      &copy; Liang-Chi Hsieh &middot; <a href="mailto:viirya@viirya.org" style="color: inherit;">viirya@viirya.org</a>
-    </footer>
+    <h1>Liang-Chi Hsieh</h1>
+    <p class="bio">Software engineer.</p>
+    <nav>
+      <a href="https://github.com/viirya">GitHub</a>
+      <a href="https://www.linkedin.com/in/liang-chi-hsieh-a7904568/">LinkedIn</a>
+      <a href="https://scholar.google.com.tw/citations?hl=zh-TW&amp;user=jEVAXJUAAAAJ">Scholar</a>
+    </nav>
   </main>
 </body>
 </html>
